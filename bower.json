@@ -1,0 +1,9 @@
+{
+  "name": "ipvix",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "nvd3": "^1.8.3",
+    "d3": "^3.5.17"
+  }
+}

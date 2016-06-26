@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block headerextension %}
+    {% if data != None %}
+        {% include_chart_jscss %}
+        {% load_chart data.charttype data.chartdata data.chartcontainer data.extra %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <p style="float: left"><a href="{% url 'IPFIX_visualization:index' %}">< Back</a></p>
+    <br>
+    <h1>{{ t2v.type.name }}</h1>
+    <p>Showed with: {{ t2v.visual.name }}</p>
+    <p>Type description: {{ t2v.type.description }}</p>
+    {% if data != None %}
+        {% include_container data.chartcontainer 500 800 %}
+    {% else %}
+        <p>There is no function specified, or the function is invalid</p>
+    {% endif %}
+{% endblock %}

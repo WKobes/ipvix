@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load nvd3_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>ipvix ~ IPFIX visualization tool</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% block headerextension %}
+    {% endblock %}
+
+</head>
+<body>
+<div class="header">
+    <h1>ipvix ~ A IPFIX visualization tool!</h1>
+</div>
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

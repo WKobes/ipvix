@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    {% if type2visuals %}
+        <ul>
+            {% for visual in type2visuals %}
+                <li>
+                    {{ visual.visual_enterprise_id }}, <a href="{% url 'IPFIX_visualization:zoominont2v' visual.id %}">{{ visual.id }}</a>, {{ visual.type_enterprise_id }}, {{ visual.type_id }}, {{ visual.type }}, {{ visual.visual }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No visuals.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+body {
+    background-color: #D9E3FF;
+}
+
+/* classes */
+
+.content {
+    margin: 10px;
+    padding: 10px;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
